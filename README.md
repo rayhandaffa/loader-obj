@@ -12,4 +12,5 @@ NRP              | Nama
 
 
 ## Visualisasi Ouput 
-![asset]()
+![asset](https://github.com/rayhandaffa/loader-obj/blob/main/asset/ouput%20visualiasi.gif)
+
