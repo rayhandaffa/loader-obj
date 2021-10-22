@@ -1,5 +1,3 @@
-// Three.js - Load .OBJ and .MTL file - Windmill2
-// from https://threejsfundamentals.org/threejs/threejs-load-obj-materials-windmill2.html
 
 'use strict';
 
@@ -25,42 +23,12 @@ function main() {
   const bgTexture = loader.load('https://cdn.pixabay.com/photo/2012/11/22/17/56/meadow-66994_960_720.jpg');
   scene.background = bgTexture;
 
-  // {
-  //   const planeSize = 4000;
-
-  //   const loader = new THREE.TextureLoader();
-  //   const texture = loader.load('https://travelmaker1.b-cdn.net/wp-content/uploads/2018/02/sapojuma.jpg');
-  //   texture.wrapS = THREE.RepeatWrapping;
-  //   texture.wrapT = THREE.RepeatWrapping;
-  //   texture.magFilter = THREE.NearestFilter;
-  //   const repeats = planeSize / 200;
-  //   texture.repeat.set(repeats, repeats);
-
-  //   const planeGeo = new THREE.PlaneBufferGeometry(planeSize, planeSize);
-  //   const planeMat = new THREE.MeshPhongMaterial({
-  //     map: texture,
-  //     side: THREE.DoubleSide,
-  //   });
-  //   const mesh = new THREE.Mesh(planeGeo, planeMat);
-  //   mesh.rotation.x = Math.PI * -.5;
-  //   scene.add(mesh);
-  // }
-
   {
     const skyColor = 0xB1E1FF;  // light blue
     const groundColor = 0xB97A20;  // brownish orange
     const intensity = 1;
     const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
     scene.add(light);
-  }
-
-  {
-    const color = 0xFFFFFF;
-    const intensity = 1;
-    const light = new THREE.DirectionalLight(color, intensity);
-    light.position.set(5, 10, 2);
-    scene.add(light);
-    scene.add(light.target);
   }
 
   function frameArea(sizeToFitOnScreen, boxSize, boxCenter, camera) {
